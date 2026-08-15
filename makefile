@@ -27,20 +27,20 @@ static/videos/%.png: static/videos/%.mp4
 static/%.png: static/%.pdf
 	pdf2png $< $@
 
-static/figures/%.pdf: $(name)/figures/%.pdf
+static/figures/%: $(name)/figures/%
 	cp $< $@
 
-static/figures/%.pdf: $(name)/../figures/%.pdf
+static/figures/%: $(name)/../figures/%
 	cp $< $@
 
 static/figures/%: $(name)/figures/%
 	mkdir -p $(@D)
 	cp $< $@
 
-static/figures/%.pdf: $(name)/theory_final_figs/%.pdf
+static/figures/%: $(name)/theory_final_figs/%
 	cp $< $@
 
-static/pdf/%.pdf: $(name)/../dist/%.pdf
+static/pdf/%: $(name)/../dist/%
 	cp $< $@
 
 build:
