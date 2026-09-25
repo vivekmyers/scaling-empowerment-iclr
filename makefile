@@ -1,4 +1,5 @@
-name = ~/papers/2026-geom-emp/src_methods_paper
+~ = $(HOME)
+name = $~/papers/2026-emp-methods
 slides = 
 
 all: $(shell perl hdeps.pl index.html)
